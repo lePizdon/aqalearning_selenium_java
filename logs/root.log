@@ -1,0 +1,6 @@
+2025-04-08 01:04:45 [main] DEBUG i.g.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.2
+2025-04-08 01:04:46 [main] DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=134 in cache (valid until 02:02:00 08/04/2025 MSK)
+2025-04-08 01:04:46 [main] DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome134=134.0.6998.165 in cache (valid until 01:02:00 09/04/2025 MSK)
+2025-04-08 01:04:46 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 134.0.6998.165 (resolved driver for Chrome 134)
+2025-04-08 01:04:46 [main] DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 134.0.6998.165 found in cache
+2025-04-08 01:04:46 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\bests\.cache\selenium\chromedriver\win64\134.0.6998.165\chromedriver.exe

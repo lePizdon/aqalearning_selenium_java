@@ -1,0 +1,108 @@
+2025-04-08 01:53:41 [Test worker] DEBUG i.g.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.2
+2025-04-08 01:53:41 [Test worker] DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=134 in cache (valid until 02:02:00 08/04/2025 MSK)
+2025-04-08 01:53:41 [Test worker] DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome134=134.0.6998.165 in cache (valid until 01:02:00 09/04/2025 MSK)
+2025-04-08 01:53:41 [Test worker] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 134.0.6998.165 (resolved driver for Chrome 134)
+2025-04-08 01:53:41 [Test worker] DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 134.0.6998.165 found in cache
+2025-04-08 01:53:41 [Test worker] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\bests\.cache\selenium\chromedriver\win64\134.0.6998.165\chromedriver.exe
+2025-04-08 02:14:42 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.WebDriverContainer: com.codeborne.selenide.WebDriverThreadLocalContainer
+2025-04-08 02:14:42 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.Photographer: com.codeborne.selenide.impl.WebdriverPhotographer
+2025-04-08 02:14:42 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.PageSourceExtractor: com.codeborne.selenide.impl.WebPageSourceExtractor
+2025-04-08 02:14:42 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.PageObjectFactory: com.codeborne.selenide.impl.SelenidePageFactory
+2025-04-08 02:14:42 [Test worker] DEBUG c.c.selenide.impl.CiReportUrl - Variable selenide.reportsUrl not found
+2025-04-08 02:15:35 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.WebDriverContainer: com.codeborne.selenide.WebDriverThreadLocalContainer
+2025-04-08 02:15:35 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.Photographer: com.codeborne.selenide.impl.WebdriverPhotographer
+2025-04-08 02:15:35 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.PageSourceExtractor: com.codeborne.selenide.impl.WebPageSourceExtractor
+2025-04-08 02:15:35 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.PageObjectFactory: com.codeborne.selenide.impl.SelenidePageFactory
+2025-04-08 02:15:35 [Test worker] DEBUG c.c.selenide.impl.CiReportUrl - Variable selenide.reportsUrl not found
+2025-04-08 02:18:50 [Test worker] DEBUG c.c.selenide.impl.CiReportUrl - Variable selenide.reportsUrl not found
+2025-04-08 02:18:50 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.WebDriverContainer: com.codeborne.selenide.WebDriverThreadLocalContainer
+2025-04-08 02:18:50 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.Photographer: com.codeborne.selenide.impl.WebdriverPhotographer
+2025-04-08 02:18:50 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.PageSourceExtractor: com.codeborne.selenide.impl.WebPageSourceExtractor
+2025-04-08 02:18:50 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.PageObjectFactory: com.codeborne.selenide.impl.SelenidePageFactory
+2025-04-08 02:19:28 [Test worker] DEBUG c.c.selenide.impl.CiReportUrl - Variable selenide.reportsUrl not found
+2025-04-08 02:19:28 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.WebDriverContainer: com.codeborne.selenide.WebDriverThreadLocalContainer
+2025-04-08 02:19:28 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.Photographer: com.codeborne.selenide.impl.WebdriverPhotographer
+2025-04-08 02:19:28 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.PageSourceExtractor: com.codeborne.selenide.impl.WebPageSourceExtractor
+2025-04-08 02:19:28 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.PageObjectFactory: com.codeborne.selenide.impl.SelenidePageFactory
+2025-04-08 02:20:06 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.WebDriverContainer: com.codeborne.selenide.WebDriverThreadLocalContainer
+2025-04-08 02:20:06 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.Photographer: com.codeborne.selenide.impl.WebdriverPhotographer
+2025-04-08 02:20:06 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.PageSourceExtractor: com.codeborne.selenide.impl.WebPageSourceExtractor
+2025-04-08 02:20:06 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.PageObjectFactory: com.codeborne.selenide.impl.SelenidePageFactory
+2025-04-08 02:20:06 [Test worker] DEBUG c.c.selenide.impl.CiReportUrl - Variable selenide.reportsUrl not found
+2025-04-08 02:20:15 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.WebDriverContainer: com.codeborne.selenide.WebDriverThreadLocalContainer
+2025-04-08 02:20:15 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.Photographer: com.codeborne.selenide.impl.WebdriverPhotographer
+2025-04-08 02:20:15 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.PageSourceExtractor: com.codeborne.selenide.impl.WebPageSourceExtractor
+2025-04-08 02:20:15 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.PageObjectFactory: com.codeborne.selenide.impl.SelenidePageFactory
+2025-04-08 02:20:15 [Test worker] DEBUG c.c.selenide.impl.CiReportUrl - Variable selenide.reportsUrl not found
+2025-04-08 02:20:46 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.WebDriverContainer: com.codeborne.selenide.WebDriverThreadLocalContainer
+2025-04-08 02:20:46 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.Photographer: com.codeborne.selenide.impl.WebdriverPhotographer
+2025-04-08 02:20:46 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.PageSourceExtractor: com.codeborne.selenide.impl.WebPageSourceExtractor
+2025-04-08 02:20:46 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.PageObjectFactory: com.codeborne.selenide.impl.SelenidePageFactory
+2025-04-08 02:20:46 [Test worker] DEBUG c.c.selenide.impl.CiReportUrl - Variable selenide.reportsUrl not found
+2025-04-08 02:21:20 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.WebDriverContainer: com.codeborne.selenide.WebDriverThreadLocalContainer
+2025-04-08 02:21:20 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.Photographer: com.codeborne.selenide.impl.WebdriverPhotographer
+2025-04-08 02:21:20 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.PageSourceExtractor: com.codeborne.selenide.impl.WebPageSourceExtractor
+2025-04-08 02:21:20 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.PageObjectFactory: com.codeborne.selenide.impl.SelenidePageFactory
+2025-04-08 02:21:20 [Test worker] DEBUG c.c.selenide.impl.CiReportUrl - Variable selenide.reportsUrl not found
+2025-04-08 02:21:20 [Test worker] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+2025-04-08 02:21:20 [Test worker] DEBUG c.c.s.d.CreateDriverCommand - Creating webdriver in thread 1 (ip: 192.168.43.13, host: FORTRESS)...
+2025-04-08 02:21:20 [Test worker] DEBUG c.codeborne.selenide.impl.FileHelper - Creating folder: C:\astash\programming\aqa\projects\aqalearning_selenium_java\build\downloads\1744068080189_10560_1
+2025-04-08 02:21:20 [Test worker] DEBUG c.c.s.webdriver.WebDriverFactory - browser=chrome
+2025-04-08 02:21:20 [Test worker] DEBUG c.c.s.webdriver.WebDriverFactory - browser.version=null
+2025-04-08 02:21:20 [Test worker] DEBUG c.c.s.webdriver.WebDriverFactory - remote=null
+2025-04-08 02:21:20 [Test worker] DEBUG c.c.s.webdriver.WebDriverFactory - browserSize=1366x768
+2025-04-08 02:21:20 [Test worker] DEBUG c.c.s.webdriver.WebDriverFactory - downloadsFolder=C:\astash\programming\aqa\projects\aqalearning_selenium_java\build\downloads\1744068080189_10560_1
+2025-04-08 02:21:20 [Test worker] DEBUG c.c.s.w.AbstractChromiumDriverFactory - Using chromium preferences: {credentials_enable_service=false, autofill.credit_card_enabled=false, autofill.profile_enabled=false, safebrowsing.enabled=true, plugins.always_open_pdf_externally=true, profile.default_content_setting_values.automatic_downloads=1, profile.password_manager_enabled=false, profile.password_manager_leak_detection=false, download.default_directory=C:\astash\programming\aqa\projects\aqalearning_selenium_java\build\downloads\1744068080189_10560_1}
+2025-04-08 02:21:20 [Test worker] DEBUG c.c.s.webdriver.ChromeDriverFactory - Chrome options: Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--proxy-bypass-list=<-loopb..., --disable-dev-shm-usage, --disable-search-engine-cho..., --unsafely-disable-devtools..., --window-size=1366,768], excludeSwitches: [enable-automation, load-extension], extensions: [], prefs: {autofill.credit_card_enabled: false, autofill.profile_enabled: false, credentials_enable_service: false, download.default_directory: C:\astash\programming\aqa\p..., plugins.always_open_pdf_externally: true, profile.default_content_setting_values.automatic_downloads: 1, profile.password_manager_enabled: false, profile.password_manager_leak_detection: false, safebrowsing.enabled: true}}, pageLoadStrategy: normal, unhandledPromptBehavior: accept}
+2025-04-08 02:21:20 [Test worker] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.7.1 / Selenium 4.28.1 / chrome 134.0.6998.178 windows
+2025-04-08 02:21:20 [Test worker] DEBUG c.c.s.d.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on windows (6c225f11a9226400ba1bfe7853149a04), downloadsFolder: C:\astash\programming\aqa\projects\aqalearning_selenium_java\build\downloads\1744068080189_10560_1
+2025-04-08 02:21:20 [Test worker] DEBUG c.c.s.d.DisposablesRegistry - Register WebDriverInstance[threadId=1, config=StaticConfig, webDriver=ChromeDriver: chrome on windows (6c225f11a9226400ba1bfe7853149a04), proxy=null, downloadsFolder=C:\astash\programming\aqa\projects\aqalearning_selenium_java\build\downloads\1744068080189_10560_1] in 1 [size=1]
+2025-04-08 02:21:20 [Test worker] DEBUG c.c.s.d.DisposablesRegistry - Add shutdown hook in 1 [size=1]
+2025-04-08 02:21:21 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.WebElementSelector: com.codeborne.selenide.impl.WebElementSelector
+2025-04-08 02:21:21 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.ElementDescriber: com.codeborne.selenide.impl.SelenideElementDescriber
+2025-04-08 02:21:21 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.commands.Clear: com.codeborne.selenide.commands.Clear
+2025-04-08 02:21:21 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.DownloadFileToFolder: com.codeborne.selenide.impl.DownloadFileToFolder
+2025-04-08 02:21:21 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.DownloadFileWithCdp: com.codeborne.selenide.impl.DownloadFileWithCdp
+2025-04-08 02:21:21 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.commands.Commands: com.codeborne.selenide.commands.Commands
+2025-04-08 02:21:22 [Thread-9] DEBUG c.c.s.d.DisposablesRegistry - Run cleanup: size=1
+2025-04-08 02:21:22 [Thread-9] DEBUG c.codeborne.selenide.impl.FileHelper - Deleted empty folder: C:\astash\programming\aqa\projects\aqalearning_selenium_java\build\downloads\1744068080189_10560_1
+2025-04-08 02:21:22 [Thread-9] DEBUG c.c.s.d.CloseDriverCommand - Close webdriver: 68 -> ChromeDriver: chrome on windows (6c225f11a9226400ba1bfe7853149a04)...
+2025-04-08 02:21:22 [Thread-9] DEBUG c.c.s.d.CloseDriverCommand - Closed webdriver 68 in 97 ms
+2025-04-08 02:21:22 [Thread-9] DEBUG c.c.s.d.DisposablesRegistry - Finished cleanup
+2025-04-08 02:21:37 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.WebDriverContainer: com.codeborne.selenide.WebDriverThreadLocalContainer
+2025-04-08 02:21:37 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.Photographer: com.codeborne.selenide.impl.WebdriverPhotographer
+2025-04-08 02:21:37 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.PageSourceExtractor: com.codeborne.selenide.impl.WebPageSourceExtractor
+2025-04-08 02:21:37 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.PageObjectFactory: com.codeborne.selenide.impl.SelenidePageFactory
+2025-04-08 02:21:37 [Test worker] DEBUG c.c.selenide.impl.CiReportUrl - Variable selenide.reportsUrl not found
+2025-04-08 02:21:37 [Test worker] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+2025-04-08 02:21:37 [Test worker] DEBUG c.c.s.d.CreateDriverCommand - Creating webdriver in thread 1 (ip: 192.168.43.13, host: FORTRESS)...
+2025-04-08 02:21:37 [Test worker] DEBUG c.codeborne.selenide.impl.FileHelper - Creating folder: C:\astash\programming\aqa\projects\aqalearning_selenium_java\build\downloads\1744068097037_15088_1
+2025-04-08 02:21:37 [Test worker] DEBUG c.c.s.webdriver.WebDriverFactory - browser=chrome
+2025-04-08 02:21:37 [Test worker] DEBUG c.c.s.webdriver.WebDriverFactory - browser.version=null
+2025-04-08 02:21:37 [Test worker] DEBUG c.c.s.webdriver.WebDriverFactory - remote=null
+2025-04-08 02:21:37 [Test worker] DEBUG c.c.s.webdriver.WebDriverFactory - browserSize=1366x768
+2025-04-08 02:21:37 [Test worker] DEBUG c.c.s.webdriver.WebDriverFactory - downloadsFolder=C:\astash\programming\aqa\projects\aqalearning_selenium_java\build\downloads\1744068097037_15088_1
+2025-04-08 02:21:37 [Test worker] DEBUG c.c.s.w.AbstractChromiumDriverFactory - Using chromium preferences: {credentials_enable_service=false, autofill.credit_card_enabled=false, autofill.profile_enabled=false, safebrowsing.enabled=true, plugins.always_open_pdf_externally=true, profile.default_content_setting_values.automatic_downloads=1, profile.password_manager_enabled=false, profile.password_manager_leak_detection=false, download.default_directory=C:\astash\programming\aqa\projects\aqalearning_selenium_java\build\downloads\1744068097037_15088_1}
+2025-04-08 02:21:37 [Test worker] DEBUG c.c.s.webdriver.ChromeDriverFactory - Chrome options: Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--proxy-bypass-list=<-loopb..., --disable-dev-shm-usage, --disable-search-engine-cho..., --unsafely-disable-devtools..., --window-size=1366,768], excludeSwitches: [enable-automation, load-extension], extensions: [], prefs: {autofill.credit_card_enabled: false, autofill.profile_enabled: false, credentials_enable_service: false, download.default_directory: C:\astash\programming\aqa\p..., plugins.always_open_pdf_externally: true, profile.default_content_setting_values.automatic_downloads: 1, profile.password_manager_enabled: false, profile.password_manager_leak_detection: false, safebrowsing.enabled: true}}, pageLoadStrategy: normal, unhandledPromptBehavior: accept}
+2025-04-08 02:21:37 [Test worker] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.7.1 / Selenium 4.28.1 / chrome 134.0.6998.178 windows
+2025-04-08 02:21:37 [Test worker] DEBUG c.c.s.d.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on windows (60276ab68a28a54d4e7ff5908173a764), downloadsFolder: C:\astash\programming\aqa\projects\aqalearning_selenium_java\build\downloads\1744068097037_15088_1
+2025-04-08 02:21:37 [Test worker] DEBUG c.c.s.d.DisposablesRegistry - Register WebDriverInstance[threadId=1, config=StaticConfig, webDriver=ChromeDriver: chrome on windows (60276ab68a28a54d4e7ff5908173a764), proxy=null, downloadsFolder=C:\astash\programming\aqa\projects\aqalearning_selenium_java\build\downloads\1744068097037_15088_1] in 1 [size=1]
+2025-04-08 02:21:37 [Test worker] DEBUG c.c.s.d.DisposablesRegistry - Add shutdown hook in 1 [size=1]
+2025-04-08 02:21:38 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.WebElementSelector: com.codeborne.selenide.impl.WebElementSelector
+2025-04-08 02:21:38 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.ElementDescriber: com.codeborne.selenide.impl.SelenideElementDescriber
+2025-04-08 02:21:38 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.commands.Clear: com.codeborne.selenide.commands.Clear
+2025-04-08 02:21:38 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.DownloadFileToFolder: com.codeborne.selenide.impl.DownloadFileToFolder
+2025-04-08 02:21:38 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.DownloadFileWithCdp: com.codeborne.selenide.impl.DownloadFileWithCdp
+2025-04-08 02:21:38 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.commands.Commands: com.codeborne.selenide.commands.Commands
+2025-04-08 02:21:38 [Thread-9] DEBUG c.c.s.d.DisposablesRegistry - Run cleanup: size=1
+2025-04-08 02:21:38 [Thread-9] DEBUG c.codeborne.selenide.impl.FileHelper - Deleted empty folder: C:\astash\programming\aqa\projects\aqalearning_selenium_java\build\downloads\1744068097037_15088_1
+2025-04-08 02:21:38 [Thread-9] DEBUG c.c.s.d.CloseDriverCommand - Close webdriver: 68 -> ChromeDriver: chrome on windows (60276ab68a28a54d4e7ff5908173a764)...
+2025-04-08 02:21:39 [Thread-9] DEBUG c.c.s.d.CloseDriverCommand - Closed webdriver 68 in 109 ms
+2025-04-08 02:21:39 [Thread-9] DEBUG c.c.s.d.DisposablesRegistry - Finished cleanup
+2025-04-08 02:22:01 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.WebDriverContainer: com.codeborne.selenide.WebDriverThreadLocalContainer
+2025-04-08 02:22:01 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.Photographer: com.codeborne.selenide.impl.WebdriverPhotographer
+2025-04-08 02:22:01 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.PageSourceExtractor: com.codeborne.selenide.impl.WebPageSourceExtractor
+2025-04-08 02:22:01 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.PageObjectFactory: com.codeborne.selenide.impl.SelenidePageFactory
+2025-04-08 02:22:01 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.WebElementSelector: com.codeborne.selenide.impl.WebElementSelector
+2025-04-08 02:22:01 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins - Using default implementation of com.codeborne.selenide.impl.ElementDescriber: com.codeborne.selenide.impl.SelenideElementDescriber
+2025-04-08 02:22:01 [Test worker] DEBUG c.c.selenide.impl.CiReportUrl - Variable selenide.reportsUrl not found

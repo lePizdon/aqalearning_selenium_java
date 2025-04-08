@@ -1,0 +1,12 @@
+<configuration>
+    <appender name="root-file" class="ch.qos.logback.core.FileAppender">
+        <file>logs/root.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <root level="DEBUG">
+        <appender-ref ref="root-file"/>
+    </root>
+</configuration>
+

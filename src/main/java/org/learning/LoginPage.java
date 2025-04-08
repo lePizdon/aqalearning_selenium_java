@@ -17,6 +17,10 @@ public class LoginPage {
     private WebElement loginButton;
 
     @Getter
+    @FindBy(xpath = "//*[contains(@class, 'error-message-container')]")
+    private WebElement errorContainer;
+
+    @Getter
     @FindBy(xpath = "//*[contains(@data-test, 'error')]")
     private WebElement errorHeader;
 
@@ -28,9 +32,9 @@ public class LoginPage {
         return errorHeader.getText().trim();
     }
 
-    public void login(String login, String password) {
+    public void login(String login) {
         loginField.sendKeys(login);
-        passwordField.sendKeys(password);
+        passwordField.sendKeys(ConfProperties.getProperty("password"));
         loginButton.click();
     }
 

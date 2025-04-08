@@ -1,13 +1,16 @@
 <configuration>
-    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-        <file>logs/test.log</file>
+    <appender name="root-file" class="ch.qos.logback.core.FileAppender">
+        <file>logs/root-test.log</file>
         <encoder>
-            <pattern>%d{HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
 
+    <logger name="com.codeborne.selenide" level="DEBUG"/>
     <logger name="org.openqa.selenium" level="DEBUG"/>
-    <root level="INFO">
-        <appender-ref ref="FILE"/>
+    <logger name="io.github.bonigarcia" level="DEBUG"/>
+    <root level="TRACE">
+        <appender-ref ref="root-file"/>
     </root>
+
 </configuration>

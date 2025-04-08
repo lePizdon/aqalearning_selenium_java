@@ -6,10 +6,14 @@ import java.util.Properties;
 
 public class ConfProperties {
     private static final Properties properties;
+
     static {
         try (FileInputStream fis = new FileInputStream("src/test/resources/conf.properties")){
             properties = new Properties();
             properties.load(fis);
+            if (fis == null) {
+                throw new RuntimeException(MessageBundle.get("load.failed.conf").toUpperCase());
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -18,4 +22,5 @@ public class ConfProperties {
     public static String getProperty(String key) {
         return properties.getProperty(key);
     }
+
 }
