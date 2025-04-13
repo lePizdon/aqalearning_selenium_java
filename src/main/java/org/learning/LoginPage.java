@@ -38,4 +38,9 @@ public class LoginPage {
         loginButton.click();
     }
 
+    public void login(String login, String password) {
+        loginField.sendKeys(login);
+        passwordField.sendKeys(password);
+        loginButton.click();
+    }
 }

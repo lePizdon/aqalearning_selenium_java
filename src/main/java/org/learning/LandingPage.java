@@ -2,15 +2,11 @@ package org.learning;
 
 import lombok.Getter;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
 import java.util.List;
 
 public class LandingPage {
@@ -34,9 +30,23 @@ public class LandingPage {
     @FindBy(xpath = "//span[contains(@class, 'shopping_cart_badge')]")
     public WebElement cartBadge;
 
+    @Getter
+    @FindBy(xpath = "//div[contains(@class, 'app_logo')]")
+    public WebElement appLogo;
+
+    @Getter
+    @FindBy(xpath = "//div[contains(@class, 'inventory_item_img')]")
+    public List<WebElement> productImages;
+
+    @Getter
+    @FindBy(xpath = "//div[contains(@class, 'inventory_item')]")
+    public List<WebElement> products;
+
     public boolean menuIsPresent() {
         return menuButton.isDisplayed();
     }
+
+    public boolean appLogoIsPresent() { return appLogo.isDisplayed(); }
 
     public void entryMenu() {
         menuButton.click();
