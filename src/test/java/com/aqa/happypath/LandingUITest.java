@@ -1,5 +1,6 @@
 package com.aqa.happypath;
 
+import com.aqa.BaseTestTemplate;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.*;
@@ -27,53 +28,53 @@ public class LandingUITest extends BaseTestTemplate {
     @BeforeAll
     public static void login() {
         WebDriverManager.chromedriver().setup();
-        BaseTestTemplate.options = new ChromeOptions();
-        BaseTestTemplate.options.addArguments("--incognito");
-        BaseTestTemplate.webDriver = new ChromeDriver(BaseTestTemplate.options);
-        BaseTestTemplate.webDriverWait = new WebDriverWait(BaseTestTemplate.webDriver, Duration.ofSeconds(5));
-        BaseTestTemplate.softly = new SoftAssertions();
-        BaseTestTemplate.logger = Log.getLogger(LandingUITest.class);
+        options = new ChromeOptions();
+        options.addArguments("--incognito");
+        webDriver = new ChromeDriver(options);
+        webDriverWait = new WebDriverWait(webDriver, Duration.ofSeconds(5));
+        softly = new SoftAssertions();
+        logger = Log.getLogger(LandingUITest.class);
 
-        BaseTestTemplate.webDriver.get(ConfProperties.getProperty("loginpage"));
-        LoginPage loginPage = new LoginPage(BaseTestTemplate.webDriver);
+        webDriver.get(ConfProperties.getProperty("loginpage"));
+        LoginPage loginPage = new LoginPage(webDriver);
         loginPage.login(ConfProperties.getProperty("user.standard"), ConfProperties.getProperty("password"));
     }
 
     @BeforeEach
     public void initPomPage() {
-        landingPage = new LandingPage(BaseTestTemplate.webDriver);
+        landingPage = new LandingPage(webDriver);
     }
 
     @Test
     @Order(1)
     public void addAllItemsOnThePageToCart_allItemsAddedToCart() {
-        Assertions.assertEquals(BaseTestTemplate.webDriver.getCurrentUrl(), ConfProperties.getProperty("landingpage"));
-        BaseTestTemplate.logger.info("Successful redirect after login");
-        BaseTestTemplate.softly.assertThat(landingPage.menuIsPresent()).isTrue();
-        BaseTestTemplate.softly.assertThat(landingPage.appLogoIsPresent()).isTrue();
+        Assertions.assertEquals(webDriver.getCurrentUrl(), ConfProperties.getProperty("landingpage"));
+        logger.info("Successful redirect after login");
+        softly.assertThat(landingPage.menuIsPresent()).isTrue();
+        softly.assertThat(landingPage.appLogoIsPresent()).isTrue();
 
         if (landingPage.menuIsPresent() && landingPage.appLogoIsPresent()) {
-            BaseTestTemplate.logger.info("Landing page rendered");
+            logger.info("Landing page rendered");
         } else {
-            BaseTestTemplate.logger.debug("Some elements if not all did not render fully");
+            logger.debug("Some elements if not all did not render fully");
         }
 
         Integer itemsCounter = landingPage.addAllItemsAndReturnThouCounter();
 
-        BaseTestTemplate.webDriverWait.until(ExpectedConditions.visibilityOf(landingPage.cartBadge));
-        BaseTestTemplate.softly.assertThat(itemsCounter).isEqualTo(landingPage.getCartCounter());
+        webDriverWait.until(ExpectedConditions.visibilityOf(landingPage.cartBadge));
+        softly.assertThat(itemsCounter).isEqualTo(landingPage.getCartCounter());
 
         if (itemsCounter.equals(landingPage.getCartCounter())) {
-            BaseTestTemplate.logger.info("Counters are equal");
+            logger.info("Counters are equal");
         } else {
-            BaseTestTemplate.logger.error("Discrepancy between counters - anomaly");
+            logger.error("Discrepancy between counters - anomaly");
         }
 
         try {
-            BaseTestTemplate.softly.assertAll();
-            BaseTestTemplate.logger.info("All assertions passed");
+            softly.assertAll();
+            logger.info("All assertions passed");
         } catch (AssertionError e) {
-            BaseTestTemplate.logger.error("Some assertions failed: {}", e.getMessage(), e);
+            logger.error("Some assertions failed: {}", e.getMessage(), e);
             throw e;
         }
     }
@@ -83,7 +84,7 @@ public class LandingUITest extends BaseTestTemplate {
     public void removeAllItemsOnPageFromCart_allItemsRemovedFromCart() {
         landingPage.removeAllItems();
         try {
-            BaseTestTemplate.webDriverWait.until(ExpectedConditions.visibilityOf(landingPage.cartBadge));
+            webDriverWait.until(ExpectedConditions.visibilityOf(landingPage.cartBadge));
             assertEquals(0, landingPage.getCartCounter());
         } catch (TimeoutException e) {
             assertTrue(landingPage.isCartBadgeAbsent());
@@ -93,15 +94,15 @@ public class LandingUITest extends BaseTestTemplate {
     @Test
     @Order(3)
     public void clickOnItemRedirectBack_successfulRedirectOnItemPageAndBack() {
-        BaseTestTemplate.webDriverWait.until(ExpectedConditions.elementToBeClickable(landingPage.getProductImages().getFirst()));
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(landingPage.getProductImages().getFirst()));
 
         landingPage.getProductImages().getFirst().click();
 
-        Assertions.assertFalse(BaseTestTemplate.webDriver.getCurrentUrl().equals(ConfProperties.getProperty("landingpage")));
+        Assertions.assertFalse(webDriver.getCurrentUrl().equals(ConfProperties.getProperty("landingpage")));
 
-        BaseTestTemplate.webDriver.navigate().back();
+        webDriver.navigate().back();
 
-        Assertions.assertEquals(BaseTestTemplate.webDriver.getCurrentUrl(), ConfProperties.getProperty("landingpage"));
+        Assertions.assertEquals(webDriver.getCurrentUrl(), ConfProperties.getProperty("landingpage"));
     }
 
     @Test
@@ -110,26 +111,26 @@ public class LandingUITest extends BaseTestTemplate {
         List<WebElement> productImages = landingPage.getProductImages();
 
         for (int i = 0; i < productImages.size(); i++) {
-            BaseTestTemplate.webDriverWait.until(ExpectedConditions.elementToBeClickable(landingPage.getProductImages().get(i)));
+            webDriverWait.until(ExpectedConditions.elementToBeClickable(landingPage.getProductImages().get(i)));
 
             landingPage.getProductImages().get(i).click();
 
-            Assertions.assertFalse(BaseTestTemplate.webDriver.getCurrentUrl().equals(ConfProperties.getProperty("landingpage")));
+            Assertions.assertFalse(webDriver.getCurrentUrl().equals(ConfProperties.getProperty("landingpage")));
 
-            BaseTestTemplate.webDriver.navigate().back();
+            webDriver.navigate().back();
 
             try {
-                BaseTestTemplate.webDriverWait.until(ExpectedConditions.urlToBe(ConfProperties.getProperty("landingpage")));
+                webDriverWait.until(ExpectedConditions.urlToBe(ConfProperties.getProperty("landingpage")));
             } catch (TimeoutException e) {
                 throw new AssertionFailedError("Failed to redirect to landing");
             }
-            Assertions.assertEquals(BaseTestTemplate.webDriver.getCurrentUrl(), ConfProperties.getProperty("landingpage"));
+            Assertions.assertEquals(webDriver.getCurrentUrl(), ConfProperties.getProperty("landingpage"));
         }
     }
 
     @AfterAll
     public static void teardown() {
-        BaseTestTemplate.webDriver.manage().deleteAllCookies();
-        BaseTestTemplate.webDriver.quit();
+        webDriver.manage().deleteAllCookies();
+        webDriver.quit();
     }
 }
