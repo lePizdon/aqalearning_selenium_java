@@ -158,6 +158,7 @@ public class LandingUITest extends BaseTestTemplate {
             softly.assertAll();
         } catch (AssertionError e) {
             logger.error("Error during assertions: {}", e);
+            throw e;
         }
     }
 
