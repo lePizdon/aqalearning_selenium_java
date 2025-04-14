@@ -39,6 +39,10 @@ public class LandingPage {
     public List<WebElement> productImages;
 
     @Getter
+    @FindBy(xpath = "//div[contains(@class, 'inventory_item_name')]")
+    public List<WebElement> productNames;
+
+    @Getter
     @FindBy(xpath = "//div[contains(@class, 'inventory_item')]")
     public List<WebElement> products;
 

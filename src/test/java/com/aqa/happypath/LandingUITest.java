@@ -19,6 +19,7 @@ import java.time.Duration;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class LandingUITest extends BaseTestTemplate {
@@ -51,7 +52,7 @@ public class LandingUITest extends BaseTestTemplate {
 
         landingPage.getProductImages().getFirst().click();
 
-        Assertions.assertFalse(webDriver.getCurrentUrl().equals(ConfProperties.getProperty("landingpage")));
+        assertFalse(webDriver.getCurrentUrl().equals(ConfProperties.getProperty("landingpage")));
 
         webDriver.navigate().back();
 
@@ -68,14 +69,14 @@ public class LandingUITest extends BaseTestTemplate {
 
             landingPage.getProductImages().get(i).click();
 
-            Assertions.assertFalse(webDriver.getCurrentUrl().equals(ConfProperties.getProperty("landingpage")));
+            assertFalse(webDriver.getCurrentUrl().equals(ConfProperties.getProperty("landingpage")));
 
             webDriver.navigate().back();
 
             try {
                 webDriverWait.until(ExpectedConditions.urlToBe(ConfProperties.getProperty("landingpage")));
             } catch (TimeoutException e) {
-                throw new AssertionError("Failed to redirect to landing");
+                throw new AssertionError("Failed to redirect to landing: {}", e);
             }
             assertEquals(webDriver.getCurrentUrl(), ConfProperties.getProperty("landingpage"));
         }
@@ -83,6 +84,27 @@ public class LandingUITest extends BaseTestTemplate {
 
     @Test
     @Order(3)
+    public void clickOnAllItemNames_successfulRedirectOnItemsPageAndBack() {
+        List<WebElement> productNames = landingPage.getProductNames();
+
+        for (int i = 0; i < productNames.size(); i++) {
+            webDriverWait.until(ExpectedConditions.elementToBeClickable(landingPage.getProductNames().get(i)));
+
+            landingPage.getProductNames().get(i).click();
+            assertFalse(webDriver.getCurrentUrl().equals(ConfProperties.getProperty("landingpage")));
+            webDriver.navigate().back();
+
+            try {
+                webDriverWait.until(ExpectedConditions.urlToBe(ConfProperties.getProperty("landingpage")));
+            } catch (TimeoutException e) {
+                throw new AssertionError("Failed to redirect to landing: {}", e);
+            }
+            assertEquals(webDriver.getCurrentUrl(), ConfProperties.getProperty("landingpage"));
+        }
+    }
+
+    @Test
+    @Order(4)
     public void clickOnAllAddToCartButtons_allItemsAddedButtonsChangeState() {
         List<WebElement> addButtons;
         Integer addedCounter = 0;
@@ -109,7 +131,7 @@ public class LandingUITest extends BaseTestTemplate {
     }
 
     @Test
-    @Order(4)
+    @Order(5)
     public void clickOnAllRemoveButtons_allItemsRemovedButtonsChangeState() {
         List<WebElement> removeButtons;
         Integer initialButtonsCount = landingPage.getRemoveButtons().size();
