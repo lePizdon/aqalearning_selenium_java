@@ -31,7 +31,7 @@ public class LandingUITest extends BaseTestTemplate {
         options = new ChromeOptions();
         options.addArguments("--incognito");
         webDriver = new ChromeDriver(options);
-        webDriverWait = new WebDriverWait(webDriver, Duration.ofSeconds(5));
+        webDriverWait = new WebDriverWait(webDriver, Duration.ofSeconds(2));
         softly = new SoftAssertions();
         logger = Log.getLogger(LandingUITest.class);
 
