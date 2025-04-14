@@ -152,7 +152,7 @@ public class LandingUITest extends BaseTestTemplate {
             softly.assertThat(landingPage.isCartBadgeAbsent()).isTrue();
         }
 
-        softly.assertThat(removedCounter).isEqualTo(landingPage.getAddButtons());
+        softly.assertThat(removedCounter).isEqualTo(landingPage.getAddButtons().size());
 
         try {
             softly.assertAll();
