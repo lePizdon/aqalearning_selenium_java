@@ -14,12 +14,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.opentest4j.AssertionFailedError;
 
 import java.time.Duration;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class LandingUITest extends BaseTestTemplate {
@@ -47,52 +46,6 @@ public class LandingUITest extends BaseTestTemplate {
 
     @Test
     @Order(1)
-    public void addAllItemsOnThePageToCart_allItemsAddedToCart() {
-        Assertions.assertEquals(webDriver.getCurrentUrl(), ConfProperties.getProperty("landingpage"));
-        logger.info("Successful redirect after login");
-        softly.assertThat(landingPage.menuIsPresent()).isTrue();
-        softly.assertThat(landingPage.appLogoIsPresent()).isTrue();
-
-        if (landingPage.menuIsPresent() && landingPage.appLogoIsPresent()) {
-            logger.info("Landing page rendered");
-        } else {
-            logger.debug("Some elements if not all did not render fully");
-        }
-
-        Integer itemsCounter = landingPage.addAllItemsAndReturnThouCounter();
-
-        webDriverWait.until(ExpectedConditions.visibilityOf(landingPage.cartBadge));
-        softly.assertThat(itemsCounter).isEqualTo(landingPage.getCartCounter());
-
-        if (itemsCounter.equals(landingPage.getCartCounter())) {
-            logger.info("Counters are equal");
-        } else {
-            logger.error("Discrepancy between counters - anomaly");
-        }
-
-        try {
-            softly.assertAll();
-            logger.info("All assertions passed");
-        } catch (AssertionError e) {
-            logger.error("Some assertions failed: {}", e.getMessage(), e);
-            throw e;
-        }
-    }
-
-    @Test
-    @Order(2)
-    public void removeAllItemsOnPageFromCart_allItemsRemovedFromCart() {
-        landingPage.removeAllItems();
-        try {
-            webDriverWait.until(ExpectedConditions.visibilityOf(landingPage.cartBadge));
-            assertEquals(0, landingPage.getCartCounter());
-        } catch (TimeoutException e) {
-            assertTrue(landingPage.isCartBadgeAbsent());
-        }
-    }
-
-    @Test
-    @Order(3)
     public void clickOnItemRedirectBack_successfulRedirectOnItemPageAndBack() {
         webDriverWait.until(ExpectedConditions.elementToBeClickable(landingPage.getProductImages().getFirst()));
 
@@ -102,11 +55,11 @@ public class LandingUITest extends BaseTestTemplate {
 
         webDriver.navigate().back();
 
-        Assertions.assertEquals(webDriver.getCurrentUrl(), ConfProperties.getProperty("landingpage"));
+        assertEquals(webDriver.getCurrentUrl(), ConfProperties.getProperty("landingpage"));
     }
 
     @Test
-    @Order(4)
+    @Order(2)
     public void clickOnAllItemsWithRedirect_successfulRedirectOnItemPagesAndBack() {
         List<WebElement> productImages = landingPage.getProductImages();
 
@@ -122,9 +75,67 @@ public class LandingUITest extends BaseTestTemplate {
             try {
                 webDriverWait.until(ExpectedConditions.urlToBe(ConfProperties.getProperty("landingpage")));
             } catch (TimeoutException e) {
-                throw new AssertionFailedError("Failed to redirect to landing");
+                throw new AssertionError("Failed to redirect to landing");
             }
-            Assertions.assertEquals(webDriver.getCurrentUrl(), ConfProperties.getProperty("landingpage"));
+            assertEquals(webDriver.getCurrentUrl(), ConfProperties.getProperty("landingpage"));
+        }
+    }
+
+    @Test
+    @Order(3)
+    public void clickOnAllAddToCartButtons_allItemsAddedButtonsChangeState() {
+        List<WebElement> addButtons;
+        Integer addedCounter = 0;
+
+        while (!(addButtons = landingPage.getAddButtons()).isEmpty()) {
+            webDriverWait.until(ExpectedConditions.elementToBeClickable(addButtons.get(0)));
+            addButtons.get(0).click();
+            addedCounter++;
+        }
+
+        List<WebElement> removeButtons = landingPage.getRemoveButtons();
+
+        softly.assertThat(removeButtons.size()).isEqualTo(addedCounter);
+
+        webDriverWait.until(ExpectedConditions.visibilityOf(landingPage.getCartBadge()));
+
+        softly.assertThat(addedCounter).isEqualTo(landingPage.getCartCounter());
+
+        try {
+            softly.assertAll();
+        } catch (AssertionError e) {
+            throw e;
+        }
+    }
+
+    @Test
+    @Order(4)
+    public void clickOnAllRemoveButtons_allItemsRemovedButtonsChangeState() {
+        List<WebElement> removeButtons;
+        Integer initialButtonsCount = landingPage.getRemoveButtons().size();
+        Integer removedCounter = 0;
+
+        while (!(removeButtons = landingPage.getRemoveButtons()).isEmpty()) {
+            webDriverWait.until(ExpectedConditions.elementToBeClickable(removeButtons.get(0)));
+            removeButtons.get(0).click();
+            removedCounter++;
+        }
+
+        softly.assertThat(removedCounter).isEqualTo(initialButtonsCount);
+
+        try {
+            webDriverWait.until(ExpectedConditions.visibilityOf(landingPage.getCartBadge()));
+            logger.debug("Badge not absent without any items in it - anomaly");
+        } catch (TimeoutException e) {
+            softly.assertThat(landingPage.isCartBadgeAbsent()).isTrue();
+        }
+
+        softly.assertThat(removedCounter).isEqualTo(landingPage.getAddButtons());
+
+        try {
+            softly.assertAll();
+        } catch (AssertionError e) {
+            logger.error("Error during assertions: {}", e);
         }
     }
 

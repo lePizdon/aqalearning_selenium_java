@@ -42,6 +42,14 @@ public class LandingPage {
     @FindBy(xpath = "//div[contains(@class, 'inventory_item')]")
     public List<WebElement> products;
 
+    @Getter
+    @FindBy(xpath = "//button[contains(@id, 'add-to-cart')]")
+    public List<WebElement> addButtons;
+
+    @Getter
+    @FindBy(xpath = "//button[contains(@id, 'remove')]")
+    public List<WebElement> removeButtons;
+
     public boolean menuIsPresent() {
         return menuButton.isDisplayed();
     }
@@ -58,18 +66,6 @@ public class LandingPage {
 
     public boolean isCartBadgeAbsent() {
         return driver.findElements(By.className("shopping_cart_badge")).isEmpty();
-    }
-
-    public Integer addAllItemsAndReturnThouCounter() {
-        List<WebElement> items = driver.findElements(By.cssSelector(".btn.btn_primary.btn_small.btn_inventory"));
-        Integer counter = items.size();
-        items.forEach(WebElement::click);
-        return counter;
-    }
-
-    public void removeAllItems() {
-        driver.findElements(By.cssSelector(".btn.btn_secondary.btn_small.btn_inventory"))
-                .forEach(WebElement::click);
     }
 
     public Integer getCartCounter() {
